@@ -15,18 +15,18 @@ export default function MealItemForm(props) {
       enteredAmountNumber < 1 ||
       enteredAmountNumber > 5
     ) {
-        setAmountIsValid(false)
+      setAmountIsValid(false);
       return;
     }
 
-    props.onAddToCart(enteredAmountNumber)
+    props.onAddToCart(enteredAmountNumber);
   };
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
       <Input
         ref={amountInputRef}
-        label="Amountt"
+        label="Amount"
         input={{
           id: "amount_" + props.id,
           type: "number",
